@@ -1,0 +1,50 @@
+Ques1: Data Types Data type refers to the type of value a variable has and the way the computer interprets it.
+Each data type has a different size. You’ve studied 5 different data types and the sizes of the data types:
+Integer: 4 bytes
+Long: 8 bytes
+Float: 4 bytes
+Double: 8 bytes
+Character: 1 byte
+You’re given a data type. Print its size in bytes.
+Example :
+Input: Long
+Output: 8
+
+Solution:
+public class Solution {
+    public static int dataTypes(String type) {
+        // Checking 'type' with all the data types we know.
+
+        if (type.equals("Integer"))
+            return 4;
+        else if (type.equals("Long"))
+            return 8;
+        else if (type.equals("Float"))
+            return 4;
+        else if (type.equals("Double"))
+            return 8;
+        else if (type.equals("Character"))
+            return 1;
+        else // 'type' should have matched with some data type above
+            return -1; // Should not be returned
+    }
+}
+Explanation :
+This Java code defines a class named `Solution` with a static method called `dataTypes`. The purpose of this method is to take a string representing a data type as input and return the size (in bytes) of that data type.
+
+Here's how the code works:
+
+1. The method `dataTypes` takes a single parameter `type`, which is a string representing a data type.
+
+2. The code uses a series of `if` and `else if` statements to check the value of the `type` parameter against different data types: "Integer", "Long", "Float", "Double", and "Character".
+
+3. Depending on the matched data type, the method returns the size of that data type in bytes. Here are the mappings:
+   - "Integer": returns 4 bytes
+   - "Long": returns 8 bytes
+   - "Float": returns 4 bytes
+   - "Double": returns 8 bytes
+   - "Character": returns 1 byte
+
+4. If none of the specified data types match the input `type`, the method returns -1. The comment suggests that this should not happen, meaning the input `type` is expected to match one of the known data types.
+
+It's worth noting that this code is specific to the data types mentioned, and if new data types are introduced later, the code would need to be updated to handle them. Additionally, it assumes that the input `type` will be provided in a specific format (e.g., "Integer", "Long"), and case sensitivity is considered in the equality checks.
