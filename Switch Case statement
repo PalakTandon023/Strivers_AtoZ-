@@ -1,0 +1,56 @@
+Ques:
+Problem statement
+Programming languages have some conditional / decision-making statements that execute when some specific condition is fulfilled.
+
+Question:
+In a menu-driven program, the user is given a set of choices of things to do (the menu) and then is asked to select a menu item.
+There are 2 choices in the menu:
+
+Choice 1 is to find the area of a circle having radius 'r'.
+Choice 2 is to find the area of a rectangle having dimensions 'l' and 'b'.
+You are given the choice 'ch' and an array 'a'.
+If ‘ch’ is 1, ‘a’ contains a single number ‘r’. If ‘ch’ is 2, ‘a’ contains 2 numbers, ‘l’ and ‘b’.
+Consider the choice and print the appropriate area.
+Example :
+Input: ‘ch’ = 2 and ‘a’ = [3, 2]
+
+Output: area = 6
+
+
+Solution:
+
+/*
+    Time complexity: O(1)
+    Space complexity: O(1)
+*/
+public class Solution {
+    public static double areaSwitchCase(int ch, double []a) {
+        double area = 0.0;
+
+        // Using switch-case to figure out whose area we want to find
+
+        switch (ch) {
+
+            case 1: // Circle
+                area = Math.PI * a[0] * a[0];
+                break;
+
+            case 2: // Rectangle
+                area = a[0] * a[1];
+
+        }
+
+        // Returning the calculated area
+        return area;
+    }
+}
+
+
+Explanation:
+This Java code defines a class named `Solution` that contains a static method `areaSwitchCase`. This method takes two parameters: an integer `ch` representing the choice of the shape (1 for a circle, 2 for a rectangle), and an array of doubles `a` containing the dimensions of the shape.
+
+The method uses a switch-case statement to determine the type of shape based on the value of `ch` and calculates the area accordingly. For the circle (case 1), it uses the formula \( \pi \times r^2 \) where \( r \) is the radius. For the rectangle (case 2), it simply multiplies the length and width to find the area.
+
+The time complexity of this method is O(1) because the execution time does not depend on the size of the input. Regardless of the dimensions or the choice of shape, the method performs a constant number of operations.
+
+The space complexity is also O(1) because the amount of memory used by the algorithm remains constant regardless of the size of the input. The only variables used are `area`, `ch`, and `a`, and their memory usage does not depend on the size of the input.
